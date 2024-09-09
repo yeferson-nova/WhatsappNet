@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WhatsappNet.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0cbd498da316c7b16d9112ea79a8d1b7e18ed9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94bf2976bf6581b1eb1a3b1485b98a0b3336d9da")]
 [assembly: System.Reflection.AssemblyProductAttribute("WhatsappNet.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WhatsappNet.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

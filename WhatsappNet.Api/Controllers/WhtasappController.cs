@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WhatsappNet.Api.Services.WhatsappCloud.SendMessages;
 
 namespace WhatsappNet.Api.Controllers
 {
@@ -6,10 +7,27 @@ namespace WhatsappNet.Api.Controllers
     [Route("api/whatsapp")]
     public class WhtasappController : Controller
     {
-        [HttpGet("test")]
-        public IActionResult Sample()
+        private readonly IWhasappCloudSendMessage _whasappCloudSendMessage;
+        public WhtasappController(IWhasappCloudSendMessage whasappCloudSendMessage)
         {
-            return Ok("ok sample");
+            _whasappCloudSendMessage = whasappCloudSendMessage;
+        }
+
+        [HttpGet("test")]
+        public async Task<IActionResult> Sample()
+        {
+            var data = new
+            {
+                messaging_product = "whatsapp",
+                to = "573012811778",
+                type = "text",
+                text = new
+                {
+                    body = "hola app"
+                }
+            };
+            var resut = await _whasappCloudSendMessage.Execute(data);
+            return Ok(resut);
         }
 
         [HttpGet]
