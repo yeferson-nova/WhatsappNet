@@ -1,4 +1,5 @@
 using WhatsappNet.Api.Services.WhatsappCloud.SendMessages;
+using WhatsappNet.Api.Util;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IWhasappCloudSendMessage, WhasappCloudSendMessage>();
+builder.Services.AddSingleton<IUtil, Util>();
 
 var app = builder.Build();
 
